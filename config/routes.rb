@@ -1,4 +1,7 @@
 Contribute::Application.routes.draw do
+  resources :causes
+
+
   resources :question_lists
 
 

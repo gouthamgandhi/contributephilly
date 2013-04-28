@@ -35,9 +35,11 @@
   })();
 </script>
 
-<%= render 'index' %>
-
-<%= yield %>
+<%= render 'layouts/index' %>
+<%= render 'layouts/navbar' %>
+<div class="container-fluid" style="margin-top:75px">
+	<%= yield %>
+	</div>
 
 </body>
 </html>
