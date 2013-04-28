@@ -1,0 +1,134 @@
+<%= render 'index' %>
+<style type="text/css" media="screen">
+.navbar-wrapper{
+	margin:0;
+	padding:0;
+	#background-color: #16333f !important;
+}
+.navbar-inner{
+	background-color: #16333f !important;
+}
+.navbar{
+	background-color: #16333f !important;
+}
+.navbar-inverse{
+	background-color: #16333f !important;
+}
+
+#logo{
+	height:15%;
+	width:20%;
+	margin-left: 100px;
+}
+.thumbnail > img {
+	 height:108px;
+	width:109px
+}
+.thumbnail{
+	border:none;
+	text-align:center;
+	box-shadow:none;
+}
+.thumbnails > li {
+    display: inline-block;
+    float: left; /* this is the part that makes it work */
+}
+
+#signup-form{
+	padding-top:50px;
+	text-align:center;
+}
+#signup-email{
+	width:700px;
+	font: 150% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+
+</style>
+<div class="navbar-wrapper">
+<div class="container-fluid" style="margin:0;padding:0">
+<div class="navbar navbar-inverse">
+<div class="navbar-inner">
+<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+	<%= image_tag "contribute-logo.png", :id=> "logo", :class=>"brand" , :style=>"text-align:center"%>
+	<div class="nav-collapse in collapse" style="height: auto;display:none">
+	<ul class="nav">
+	<li class="active">
+	<a href="#"></a>
+	</li>
+	<li>
+	<a href="#about"></a>
+	</li>
+	<li>
+	<a href="#contact"></a>
+	</li>
+	</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="myCarousel" class="carousel slide" data-pause="remove">
+<div class="carousel-inner">
+<div class="item active">
+<img src="/assets/topPhoto2.jpg" >
+<div class="container">
+<div class="carousel-caption" style="text-align:center">
+	<h1 sytle="font-family: Merriweather, sans-serif !important;padding:5px;font-size:250% !important">
+		CONNECT WITH THE CAUSE
+	</h1>
+	<p class="p1" id="bio" style="padding:5px;font-size:150% !important">
+		Contribute is a platform that connects non-profit organizations with volunteers, designers and developers
+	</p>
+	<p>
+	</p>
+	<div id="signup-form">
+		<%= form_tag({:controller=> "customers", :method => "create" },{:class=>"form-inline", :remote =>true } ) do %>
+		<%= email_field :customer, :email, :class=>"input-large", :id=>"signup-email", :style=>"height:35px !important", :placeholder=>"Enter your email address we will let you know when we launch ..." %>
+	  	<%= submit_tag "SignUp !!" , :class => "btn-large btn-primary", :id=>"submit-btn",:style => "background-color:#c55c46;" %>
+	<% end %>
+	</div>
+	<div id="social-buttons" style="padding:10px;z-index:99999">
+		<a href="https://twitter.com/contributephl" class="twitter-follow-button" data-show-count="false">Follow @contributephl</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		
+	<div class="fb-like" style="padding:10px;z-index:99999 !important"  data-href="https://www.facebook.com/ContributePhilly" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-font="verdana"></div>	
+	</div>
+</div>
+</div>
+</div>
+</div>
+<!--a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a -->
+</div>
+
+
+<div class="container">
+	<ul class=" thumbnails" >
+	  <li class="span4">
+	   <div class="thumbnail">
+	      <img src="/assets/heart.png" alt=""  class="label-icon">
+	    <h3>What is Contribute ?</h3>
+		      <p>Contribute is a way for non-profits to connect with designers and developers willing to volunteer their services</p>
+	   </div>
+	  </li>
+	  <li class="span4">
+	   <div class="thumbnail">
+	      <img src="/assets/nonprofit.png" alt=""class="label-icon">
+	     <h3>Non-Profits</h3>
+			      <p>Non-Profits need branding, flyers, websites etc but don't know where to start or who to contact</p>
+		   </div>
+	  </li>
+	  <li class="span4">
+	   <div class="thumbnail">
+	      <img src="/assets/designdev.png"  alt=""class="label-icon">
+	     <h3>Designers & Developers</h3>
+			      <p>Designers and developers share their skills for a greater cause.</p>
+		   </div>
+	  </li>
+	</ul>
+	
+</div>

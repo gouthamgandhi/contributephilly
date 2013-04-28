@@ -1,0 +1,106 @@
+---
+- !ruby/object:Rubber::Configuration::InstanceItem
+  name: db01
+  domain: contributephilly.co
+  roles:
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: db
+    options:
+      primary: true
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: mysql
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: mysql_master
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: collectd
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: monit
+    options: {}
+  instance_id: i-087b1966
+  image_type: c1.medium
+  image_id: ami-b6089bdf
+  security_groups:
+  - Contribute_production_default
+  - Contribute_production_db01
+  - Contribute_production_db
+  - Contribute_production_mysql
+  - Contribute_production_mysql_master
+  - Contribute_production_collectd
+  - Contribute_production_monit
+  external_host: ec2-174-129-61-122.compute-1.amazonaws.com
+  external_ip: 174.129.61.122
+  internal_host: ip-10-195-55-191.ec2.internal
+  internal_ip: 10.195.55.191
+  zone: us-east-1a
+  platform: linux
+  root_device_type: instance-store
+- !ruby/object:Rubber::Configuration::InstanceItem
+  name: app
+  domain: contributephilly.co
+  roles:
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: app
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: unicorn
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: nginx
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: collectd
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: monit
+    options: {}
+  instance_id: i-702c7419
+  image_type: c1.medium
+  image_id: ami-b6089bdf
+  security_groups:
+  - Contribute_production_default
+  - Contribute_production_app
+  - Contribute_production_unicorn
+  - Contribute_production_nginx
+  - Contribute_production_collectd
+  - Contribute_production_monit
+  external_host: ec2-23-22-12-94.compute-1.amazonaws.com
+  external_ip: 23.22.12.94
+  internal_host: ip-10-245-94-225.ec2.internal
+  internal_ip: 10.245.94.225
+  zone: us-east-1a
+  platform: linux
+  root_device_type: instance-store
+- !ruby/object:Rubber::Configuration::InstanceItem
+  name: web01
+  domain: contributephilly.co
+  roles:
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: web
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: collectd
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: monit
+    options: {}
+  instance_id: i-2f724e40
+  image_type: c1.medium
+  image_id: ami-b6089bdf
+  security_groups:
+  - Contribute_production_default
+  - Contribute_production_web
+  - Contribute_production_web01
+  - Contribute_production_collectd
+  - Contribute_production_monit
+  external_host: ec2-54-234-35-94.compute-1.amazonaws.com
+  external_ip: 54.234.35.94
+  internal_host: ip-10-245-53-121.ec2.internal
+  internal_ip: 10.245.53.121
+  zone: us-east-1a
+  platform: linux
+  root_device_type: instance-store
+- volumes: {}
+  static_ips: {}
