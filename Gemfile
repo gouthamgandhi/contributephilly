@@ -15,6 +15,9 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem "therubyracer"
+  gem "less-rails"
+  gem "twitter-bootstrap-rails"
 end
 
 gem "therubyracer"
@@ -25,11 +28,11 @@ gem 'jquery-rails'
 gem 'pg'
 
 group :development do
-  gem 'sqlite3'
+  gem 'pg'
 end
-
+gem 'taps'
 group :production do
-  gem 'mysql2'
+  gem 'pg'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
