@@ -1,4 +1,7 @@
 Contribute::Application.routes.draw do
+  resources :question_lists
+
+
   get "static_page/index"
 
   resources :customers

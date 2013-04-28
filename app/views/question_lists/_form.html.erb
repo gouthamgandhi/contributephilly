@@ -1,0 +1,38 @@
+<%= form_for @question_list, :html => { :class => 'form-vertical' } do |f| %>
+  <div class="control-group">
+    <%= f.label :question, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :question, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :for, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :for, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :purpose, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :purpose, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :kind, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :kind, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :free_text, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :free_text, :class => 'text_area' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "New Question", :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                question_lists_path, :class => 'btn' %>
+  </div>
+<% end %>

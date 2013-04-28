@@ -1,8 +1,77 @@
 <%= render 'index' %>
 <style type="text/css" media="screen">
+.navbar-wrapper{
+	margin:0;
+	padding:0;
+	#background-color: #16333f !important;
+}
+.navbar-inner{
+	background-color: #16333f !important;
+}
+.navbar{
+	background-color: #16333f !important;
+}
+.navbar-inverse{
+	background-color: #16333f !important;
+}
+
+#logo{
+	height:15%;
+	width:20%;
+	margin-left: 100px;
+}
+
+.thumbnail > img {
+	 height:108px;
+	width:109px
+}
+.thumbnail{
+	border:none;
+	text-align:center;
+	box-shadow:none;
+}
+.thumbnails > li {
+    display: inline-block;
+    float: left; /* this is the part that makes it work */
+}
+
+#signup-form{
+	padding-top:50px;
+	text-align:center;
+}
+#signup-email{
+	width:700px;
+	font: 150% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
 
 </style>
-<%= render 'layouts/navbar' %>
+<div class="navbar-wrapper">
+<div class="container-fluid" style="margin:0;padding:0">
+<div class="navbar navbar-inverse">
+<div class="navbar-inner">
+<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+	<%= image_tag "contribute-logo.png", :id=> "logo", :class=>"brand" , :style=>"text-align:center"%>
+	<div class="nav-collapse in collapse" style="height: auto;display:none">
+	<ul class="nav">
+	<li class="active">
+	<a href="#"></a>
+	</li>
+	<li>
+	<a href="#about"></a>
+	</li>
+	<li>
+	<a href="#contact"></a>
+	</li>
+	</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div id="myCarousel" class="carousel slide" data-pause="remove">
 <div class="carousel-inner">
 <div class="item active">
@@ -35,32 +104,4 @@
 </div>
 <!--a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
 <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a -->
-</div>
-
-
-<div class="container">
-	<ul class=" thumbnails" >
-	  <li class="span4">
-	   <div class="thumbnail">
-	      <img src="/assets/heart.png" alt=""  class="label-icon">
-	    <h3>What is Contribute ?</h3>
-		      <p>Contribute is a way for non-profits to connect with designers and developers willing to volunteer their services</p>
-	   </div>
-	  </li>
-	  <li class="span4">
-	   <div class="thumbnail">
-	      <img src="/assets/nonprofit.png" alt=""class="label-icon">
-	     <h3>Non-Profits</h3>
-			      <p>Non-Profits need branding, flyers, websites etc but don't know where to start or who to contact</p>
-		   </div>
-	  </li>
-	  <li class="span4">
-	   <div class="thumbnail">
-	      <img src="/assets/designdev.png"  alt=""class="label-icon">
-	     <h3>Designers & Developers</h3>
-			      <p>Designers and developers share their skills for a greater cause.</p>
-		   </div>
-	  </li>
-	</ul>
-	
 </div>

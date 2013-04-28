@@ -29,6 +29,7 @@ gem 'pg'
 
 group :development do
   gem 'pg'
+  gem 'sqlite3'
 end
 gem 'taps'
 group :production do
