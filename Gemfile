@@ -23,6 +23,7 @@ gem "twitter-bootstrap-rails"
 gem "rubber"
 gem 'jquery-rails'
 gem 'pg'
+
 group :development do
   gem 'sqlite3'
 end
